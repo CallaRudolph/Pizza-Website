@@ -76,6 +76,12 @@ $(document).ready(function() {
   $("#newMeat").text(inputtedMeat);
   $("#newTopping").text(inputtedTopping);
   $("#price").text(newPrice.newPrice());
-
   });
+
+  $(".receipt").submit(function(event) {
+  event.preventDefault();
+  $(".receipt").hide();
+  $("#pizza").show();
+  });
+  
 });

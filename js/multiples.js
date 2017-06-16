@@ -114,7 +114,7 @@ $(document).ready(function() {
     $("#newTopping").text(inputtedTopping);
     $("#price").text(newPrice.newPrice());
   })
-  $("#receipt").show();
+  $(".receipt").show();
 
 
   });

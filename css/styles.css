@@ -50,6 +50,7 @@ body {
 .btn-danger {
   margin: auto;
   display: block;
+  font-size: 20px;
 }
 
 #receipt {
