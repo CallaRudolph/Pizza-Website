@@ -2,12 +2,30 @@
   padding: 4px;
 }
 
-.btn-danger {
-  margin: auto;
-  display: block;
+.jumbotron h4 {
+  text-align: center;
 }
 
-.btn-info {
+.jumbotron ol {
+  text-align: left;
+  display: inline-block;
+}
+
+.jumbotron h3 {
+  text-align: center;
+}
+#name {
+  position: relative;
+  top: 50%;
+  left: 30%;
+  width: 42%;
+}
+
+#name h3, input {
+  display: inline;
+}
+
+.btn-danger {
   margin: auto;
   display: block;
 }
