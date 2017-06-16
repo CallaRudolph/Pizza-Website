@@ -6,3 +6,8 @@
   margin: auto;
   display: block;
 }
+
+#receipt {
+  display: none;
+  text-align: center;
+}
