@@ -69,7 +69,7 @@
 
       <form id="receipt">
         <div class="well">
-          <h3>Here's the rundown and price for your Pizza Pizza experience, <span id="newName"></span>:</h3>
+          <h3>Here's the rundown and price for your Pizza Pizza experience, <span class="newName"></span>:</h3>
           <h4><em>You ordered a <span id="newSize"></span> pizza with <span id="newMeat"></span> meat and some <span id="newTopping"></span> toppings.</em></h4>
           <h3>Make sure you bring $<span id="price"></span> when you pick up your experience!</h3>
           <h4>It should be ready within the hour or your money back!</h4>
@@ -85,6 +85,25 @@
           <div class="col-md-4"></div>
         </div>
       </form>
+      <form id="address">
+        <div class="well" id="newAddress">
+          <h3>Cool, we can deliver. Just tell us where to go!</h3>
+          <div class="form-group">
+            <input type="text" id="street" placeholder="street address">
+            <input type="text" id="zip" placeholder="zip code">
+            <input type="text" id="phone" placeholder="phone # if we get lost">
+          </div>
+          <button type="submit" class="btn-danger">Submit</button><br>
+        </div>
+      </form>
+
+      <form id="newDelivery">
+        <div class="well">
+          <h3>Sounds good, <span class="newName"></span>. We'll head over to <span id="newStreet"></span> as soon as your order is ready. Add an additional $20 to your total for delivery. <em>(Sorry, we're just getting started!)</em></h3>
+        </div>
+
+      </form>
+
       <footer><em>Pizza Pizza &copy;, the next best thing if Pizza Schmizza is busy.</em></footer>
 
     </div>

@@ -58,30 +58,45 @@ $(document).ready(function() {
   $("#pizza").submit(function(event) {
   event.preventDefault();
 
-  var inputtedName = $("#nameInput").val();
-  var inputtedSize = $("#size").val();
-  var inputtedMeat = $("#meat").val();
-  var inputtedTopping = $("#topping").val();
+    inputtedName = $("#nameInput").val();
+    var inputtedSize = $("#size").val();
+    var inputtedMeat = $("#meat").val();
+    var inputtedTopping = $("#topping").val();
 
-  var newPizza = new Pizza(inputtedSize, inputtedMeat, inputtedTopping);
-  var newSize = newPizza.newSize(inputtedSize);
-  var newMeat = newPizza.newMeat(inputtedMeat);
-  var newTopping = newPizza.newTopping(inputtedTopping);
-  var newPrice = new Price (newSize, newMeat, newTopping);
+    var newPizza = new Pizza(inputtedSize, inputtedMeat, inputtedTopping);
+    var newSize = newPizza.newSize(inputtedSize);
+    var newMeat = newPizza.newMeat(inputtedMeat);
+    var newTopping = newPizza.newTopping(inputtedTopping);
+    var newPrice = new Price (newSize, newMeat, newTopping);
 
-  $("#receipt").show();
-  $("#pizza").hide();
-  $("#newName").text(inputtedName);
-  $("#newSize").text(inputtedSize);
-  $("#newMeat").text(inputtedMeat);
-  $("#newTopping").text(inputtedTopping);
-  $("#price").text(newPrice.newPrice());
+    $("#receipt").show();
+    $("#pizza").hide();
+    $(".newName").text(inputtedName);
+    $("#newSize").text(inputtedSize);
+    $("#newMeat").text(inputtedMeat);
+    $("#newTopping").text(inputtedTopping);
+    $("#price").text(newPrice.newPrice());
   });
 
   $(".receipt").submit(function(event) {
   event.preventDefault();
-  $(".receipt").hide();
-  $("#pizza").show();
+    $(".receipt").hide();
+    $("#pizza").show();
   });
-  
+
+  $("#delivery").click(function(event) {
+  event.preventDefault();
+    $("#receipt").hide();
+    $("#pizza").hide();
+    $("#address").show();
+  });
+
+  $("#address").submit(function(event) {
+  event.preventDefault();
+  var inputtedStreet = $("#street").val();
+    $("#address").hide();
+    $("#newDelivery").show();
+    $(".newName").text(inputtedName);
+    $("#newStreet").text(inputtedStreet);
+  });
 });
