@@ -39,7 +39,7 @@
                 <option value="pepperoni">Pepperoni: $3</option>
                 <option value="sausage">Sausage: $4</option>
                 <option value="bacon">Bacon (premium): $6</option>
-                <option value="veggie">No Meat: $0</option>
+                <option value="a lack of">No Meat: $0</option>
               </select><br>
             </div>
           </div>
@@ -49,10 +49,10 @@
               <h3>Choose your topping:</h3><br>
               <select class="form-control" id="topping">
                 <option value="extra cheese">Extra Cheese: $5</option>
-                <option value="mushrooms">Chanterelles: $10</option>
+                <option value="mushroom">Chanterelles: $10</option>
                 <option value="pineapple">Pineapple: $4</option>
-                <option value="peppers">Bell Peppers: $3</option>
-                <option value="none">No toppings: $0</option>
+                <option value="pepper">Bell Peppers: $3</option>
+                <option value="no">No toppings: $0</option>
               </select><br>
             </div>
           </div>
@@ -63,7 +63,8 @@
       </form>
 
       <div class="well" id="receipt">
-        <h1>Here's the price for your Pizza Pizza experience!</h1>
+        <h2>Here's the rundown and price for your Pizza Pizza experience:</h2>
+        <h3><em>You ordered a <span id="newSize"></span> pizza with <span id="newMeat"></span> meat and <span id="newTopping"></span> toppings.</em></h3>
         <h2>Make sure you bring $<span id="price"></span> when you pick up your experience!</h2>
       </div>
 
