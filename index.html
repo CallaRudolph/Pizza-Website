@@ -12,11 +12,12 @@
       <div class="jumbotron">
         <h2>Hey there! Looks like you want to order some Pizza Pizza.</h2>
         <h3>Go through and make some selections.</h3>
-        <ol>
+        <h4><ol>
           <li>Choose your size</li>
           <li>Choose your meat (or not)</li>
           <li>Choose your topping</li>
-        </ol>
+          <li>Repeat as needed</li>
+        </ol></h4>
         <h3>We'll do the rest!</h3>
       </div>
       <form id="pizza">
@@ -58,8 +59,18 @@
           </div>
 
         </div>
-
-        <button type="submit" class="btn-danger">Grab your total!</button><br>
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn-danger">Grab your total!</button>
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn-info">Want more?</button><br>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
       </form>
 
       <div class="well" id="receipt">

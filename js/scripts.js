@@ -45,7 +45,7 @@ function Price (size, meat, topping) {
   this.size = size;
   this.meat = meat;
   this.topping = topping;
-  this.price = 0;
+  this.price;
 }
 
 Price.prototype.newPrice = function () {
