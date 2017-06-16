@@ -69,9 +69,9 @@ $(document).ready(function() {
   var newPrice = new Price (newSize, newMeat, newTopping);
 
   $("#receipt").show();
-  $("#newSize").text(inputtedSize + " for $" + newSize);
-  $("#newMeat").text(inputtedMeat + " for $" + newMeat);
-  $("#newTopping").text(inputtedTopping + " for $" + newTopping);
+  $("#newSize").text(inputtedSize);
+  $("#newMeat").text(inputtedMeat);
+  $("#newTopping").text(inputtedTopping);
   $("#price").text(newPrice.newPrice());
 
   });
