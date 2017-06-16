@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h2>Hey there! Looks like you want to order some Pizza Pizza.</h2>
+        <h2>Hey there! Looks like you want to order some Pizza Pizza. <img id="pizza-icon" src="../pizza/img/pizza-icon.png" alt="pizza icon"></h2>
         <h4>Go through and make some selections.</h4>
         <h4><ol>
           <li>Choose your size</li>
@@ -60,16 +60,21 @@
         </div>
         <div class="well" id="name">
           <h3>What's yr name?  </h3>
-          <input type="text" id="nameInput" placeholder="so we don't eat it">
+          <div class="form-group">
+            <input type="text" id="nameInput" placeholder="so we don't *snarf* it">
+          </div>
         </div>
         <button type="submit" class="btn-danger">Grab your total!</button><br>
       </form>
 
       <div class="well" id="receipt">
-        <h3>Here's the rundown and price for your Pizza Pizza experience:</h3>
+        <h3>Here's the rundown and price for your Pizza Pizza experience, <span id="newName"></span>:</h3>
         <h4><em>You ordered a <span id="newSize"></span> pizza with <span id="newMeat"></span> meat and some <span id="newTopping"></span> toppings.</em></h4>
-        <h2>Make sure you bring $<span id="price"></span> when you pick up your experience!</h2>
+        <h3>Make sure you bring $<span id="price"></span> when you pick up your experience!</h3>
+        <h4>It should be ready within the hour or your money back!</h4>
       </div>
+
+      <footer><em>Pizza Pizza &copy;, the next best thing if Pizza Schmizza is busy.</em></footer>
 
     </div>
   </body>

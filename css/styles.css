@@ -1,5 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+
+body {
+  font-family: 'Shadows Into Light Two', cursive;
+  background-image: url(../img/background.jpg);
+}
+
 .jumbotron {
   padding: 4px;
+  background-color: #ff4d4d;
 }
 
 .jumbotron h4 {
@@ -14,6 +23,15 @@
 .jumbotron h3 {
   text-align: center;
 }
+
+.well {
+  background-color: #ff4d4d;
+}
+
+#pizza-icon {
+  width: 5%;
+}
+
 #name {
   position: relative;
   top: 50%;
@@ -21,7 +39,11 @@
   width: 42%;
 }
 
-#name h3, input {
+#name h3 {
+  display: inline;
+}
+
+#name .form-group {
   display: inline;
 }
 
@@ -33,4 +55,10 @@
 #receipt {
   display: none;
   text-align: center;
+}
+
+footer {
+  text-align: center;
+  text-shadow: 2px 2px white;
+  font-weight: 500;
 }

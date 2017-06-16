@@ -58,6 +58,7 @@ $(document).ready(function() {
   $("#pizza").submit(function(event) {
   event.preventDefault();
 
+  var inputtedName = $("#nameInput").val();
   var inputtedSize = $("#size").val();
   var inputtedMeat = $("#meat").val();
   var inputtedTopping = $("#topping").val();
@@ -69,6 +70,8 @@ $(document).ready(function() {
   var newPrice = new Price (newSize, newMeat, newTopping);
 
   $("#receipt").show();
+  $("#pizza").hide();
+  $("#newName").text(inputtedName);
   $("#newSize").text(inputtedSize);
   $("#newMeat").text(inputtedMeat);
   $("#newTopping").text(inputtedTopping);
