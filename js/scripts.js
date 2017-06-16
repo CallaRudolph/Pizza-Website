@@ -3,7 +3,7 @@ function Pizza(size, meat, topping) {
   this.size = size;
   this.meat = meat;
   this.topping = topping;
-}
+};
 
 Pizza.prototype.newSize = function() {
   if (this.size === "large") {
@@ -46,12 +46,12 @@ function Price (size, meat, topping) {
   this.meat = meat;
   this.topping = topping;
   this.price;
-}
+};
 
 Price.prototype.newPrice = function () {
   this.price = this.size + this.meat + this.topping;
   return this.price;
-}
+};
 
 //user interface here:
 $(document).ready(function() {
@@ -93,10 +93,13 @@ $(document).ready(function() {
 
   $("#address").submit(function(event) {
   event.preventDefault();
-  var inputtedStreet = $("#street").val();
+    var inputtedStreet = $("#street").val();
+    var inputtedPhone = $("#phone").val();
+
     $("#address").hide();
     $("#newDelivery").show();
     $(".newName").text(inputtedName);
     $("#newStreet").text(inputtedStreet);
+    $("#newPhone").text(inputtedPhone);
   });
 });

@@ -74,9 +74,27 @@ body {
   text-align: center;
 }
 
+.form-control {
+  font-size: 20px;
+}
+
+.form-group {
+  font-size: 16px;
+}
+
+#car {
+  width: 70%;
+}
+
 footer {
   text-align: center;
-  text-shadow: .5px .5px white;
-  font-size: 16px;
-  color: red;
+  /*text-shadow: .5px .5px black;*/
+  font-size: 18px;
+  /*color: grey;*/
+  font-weight: bolder;
+  background-color: #ffffe6;
+  width: 80%;
+  position: relative;
+  top: 50%;
+  left: 10%;
 }
