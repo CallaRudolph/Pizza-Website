@@ -55,6 +55,9 @@ Price.prototype.newPrice = function () {
 
 //user interface here:
 $(document).ready(function() {
+  $("#pizza").submit(function(event) {
+  event.preventDefault();
+
   var inputtedSize = $("#size").val();
   var inputtedMeat = $("#meat").val();
   var inputtedTopping = $("#topping").val();
@@ -64,47 +67,6 @@ $(document).ready(function() {
   var newMeat = newPizza.newMeat(inputtedMeat);
   var newTopping = newPizza.newTopping(inputtedTopping);
   var newPrice = new Price (newSize, newMeat, newTopping);
-
-  $("#morePizza").click(function(event) {
-  event.preventDefault();
-  $("#newPizza").append('<div class="row" id="morePizza">' +
-                          '<div class="col-md-4">' +
-                            '<div class="well">' +
-                              '<h3>Choose your size:</h3><br>' +
-                              '<select class="form-control" id="size">' +
-                                '<option value="large">Large: $12</option>' +
-                                '<option value="medium">Medium: $10</option>' +
-                                '<option value="tiny">Tiny: $8</option>' +
-                              '</select><br>' +
-                            '</div>' +
-                          '</div>' +
-                          '<div class="col-md-4">' +
-                            '<div class="well">' +
-                              '<h3>Choose your meat:</h3><br>' +
-                              '<select class="form-control" id="meat">' +
-                                '<option value="pepperoni">Pepperoni: $3</option>' +
-                                '<option value="sausage">Sausage: $4</option>' +
-                                '<option value="bacon">Bacon (premium): $6</option>' +
-                                '<option value="no">No Meat: $0</option>' +
-                              '</select><br>' +
-                            '</div>' +
-                          '</div>' +
-                          '<div class="col-md-4">' +
-                            '<div class="well">' +
-                              '<h3>Choose your topping:</h3><br>' +
-                              '<select class="form-control" id="topping">' +
-                                '<option value="extra cheese">Extra Cheese: $5</option>' +
-                                '<option value="mushroom">Chanterelles: $10</option>' +
-                                '<option value="pineapple">Pineapple: $4</option>' +
-                                '<option value="pepper">Bell Peppers: $3</option>' +
-                                '<option value="serious lack of">No toppings: $0</option>' +
-                              '</select><br>' +
-                            '</div>' +
-                          '</div>');
-  });
-
-  $("#pizza").submit(function(event) {
-  event.preventDefault();
 
   $("#receipt").show();
   $("#newSize").text(inputtedSize);
