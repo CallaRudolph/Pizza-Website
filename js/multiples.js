@@ -9,9 +9,9 @@ Pizza.prototype.newSize = function() {
   if (this.size === "large") {
     return 12;
   } else if (this.size === "medium") {
-  return 10;
+    return 10;
   } else {
-  return 8;
+    return 8;
   }
 };
 
@@ -19,11 +19,11 @@ Pizza.prototype.newMeat = function() {
   if (this.meat === "pepperoni") {
     return 3;
   } else if (this.meat === "sausage") {
-  return 4;
+    return 4;
   } else if (this.meat === "bacon") {
-  return 6;
+    return 6;
   } else {
-  return 0;
+    return 0;
   }
 };
 
@@ -31,13 +31,13 @@ Pizza.prototype.newTopping = function() {
   if (this.topping === "extra cheese") {
     return 5;
   } else if (this.topping === "mushroom") {
-  return 10;
+    return 10;
   } else if (this.topping === "pineapple") {
-  return 4;
+    return 4;
   } else if (this.topping === "pepper") {
-  return 3;
+    return 3;
   } else {
-  return 0;
+    return 0;
   }
 };
 
