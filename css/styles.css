@@ -48,6 +48,10 @@ body {
   display: inline;
 }
 
+#toppingz {
+  padding-bottom: 5px;
+}
+
 .btn-danger {
   margin: auto;
   display: block;
