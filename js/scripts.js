@@ -3,16 +3,18 @@ function Pizza(size, meat, topping) {
   this.size = size;
   this.meat = meat;
   this.topping = topping;
+  this.cost = 0;
 };
 
 Pizza.prototype.newSize = function() {
   if (this.size === "large") {
-    return 12;
+    this.cost = 12 + (2 * this.topping.length);
   } else if (this.size === "medium") {
-    return 10;
+    this.cost = 10 + (2 * this.topping.length);
   } else {
-    return 8;
+    this.cost = 8 + (2 * this.topping.length);
   }
+  return this.cost;
 };
 
 Pizza.prototype.newMeat = function() {
@@ -27,29 +29,38 @@ Pizza.prototype.newMeat = function() {
   }
 };
 
-Pizza.prototype.newTopping = function() {
-  if (this.topping === "extra cheese") {
-    return 5;
-  } else if (this.topping === "mushroom") {
-    return 10;
-  } else if (this.topping === "pineapple") {
-    return 4;
-  } else if (this.topping === "pepper") {
-    return 3;
-  } else {
-    return 0;
-  }
-};
+// Pizza.prototype.newTopping = function() {
+//   if (this.topping === "extra cheese") {
+//     return 5;
+//   } else if (this.topping === "mushroom") {
+//     return 10;
+//   } else if (this.topping === "pineapple") {
+//     return 4;
+//   } else if (this.topping === "pepper") {
+//     return 3;
+//   } else {
+//     return 0;
+//   }
+// };
 
 function Price (size, meat, topping) {
   this.size = size;
   this.meat = meat;
-  this.topping = topping;
+  // this.topping = topping;
   this.price;
 };
 
 Price.prototype.newPrice = function () {
-  this.price = this.size + this.meat + this.topping;
+  this.price = this.size + this.meat;
+  return this.price;
+};
+
+function Delivery (total) {
+  this.price = total;
+};
+
+Delivery.prototype.newDelivery = function () {
+  this.price = this.price + 20;
   return this.price;
 };
 
@@ -61,21 +72,26 @@ $(document).ready(function() {
     inputtedName = $("#nameInput").val();
     var inputtedSize = $("#size").val();
     var inputtedMeat = $("#meat").val();
-    var inputtedTopping = $("#topping").val();
-
+    var inputtedTopping = []
+    $("input:checkbox[name=toppings]:checked").each(function() {
+     var topping = $(this).val();
+     inputtedTopping.push(topping);
+    });
+    console.log(inputtedTopping);
     var newPizza = new Pizza(inputtedSize, inputtedMeat, inputtedTopping);
     var newSize = newPizza.newSize(inputtedSize);
     var newMeat = newPizza.newMeat(inputtedMeat);
-    var newTopping = newPizza.newTopping(inputtedTopping);
-    var newPrice = new Price (newSize, newMeat, newTopping);
+    // var newTopping = newPizza.newTopping(inputtedTopping);
+    var newPrice = new Price (newSize, newMeat);
+    total = newPrice.newPrice();
 
     $("#receipt").show();
     $("#pizza").hide();
     $(".newName").text(inputtedName);
     $("#newSize").text(inputtedSize);
     $("#newMeat").text(inputtedMeat);
-    $("#newTopping").text(inputtedTopping);
-    $("#price").text(newPrice.newPrice());
+    // $("#newTopping").text(inputtedTopping);
+    $("#price").text(total);
   });
 
   $(".receipt").click(function() {
@@ -83,21 +99,25 @@ $(document).ready(function() {
     $("#pizza").show();
   });
 
-  $("#delivery").click(function() {
+  $("#delivery").click(function(event) {
+  event.preventDefault();
     $("#receipt").hide();
     $("#pizza").hide();
     $("#address").show();
   });
 
   $("#address").submit(function(event) {
-    event.preventDefault();
+  event.preventDefault();
     var inputtedStreet = $("#street").val();
     var inputtedPhone = $("#phone").val();
+
+    var newDelivery = new Delivery (total);
 
     $("#address").hide();
     $("#newDelivery").show();
     $(".newName").text(inputtedName);
     $("#newStreet").text(inputtedStreet);
     $("#newPhone").text(inputtedPhone);
+    $("#deliveryPrice").text(newDelivery.newDelivery());
   });
 });
