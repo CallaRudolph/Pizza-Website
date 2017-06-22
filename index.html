@@ -28,7 +28,7 @@
                 <option value="large">Large: $12</option>
                 <option value="medium">Medium: $10</option>
                 <option value="tiny">Tiny: $8</option>
-              </select><br>
+              </select><br><br>
             </div>
           </div>
           <div class="col-md-4">
@@ -39,19 +39,33 @@
                 <option value="sausage">Sausage: $4</option>
                 <option value="bacon">Bacon (premium): $6</option>
                 <option value="no">No Meat: $0</option>
-              </select><br>
+              </select><br><br>
             </div>
           </div>
           <div class="col-md-4">
             <div class="well">
               <h3>Choose your topping:</h3><br>
-              <select class="form-control" id="topping">
+              <!-- <select class="form-control" id="topping">
                 <option value="extra cheese">Extra Cheese: $5</option>
                 <option value="mushroom">Chanterelles: $10</option>
                 <option value="pineapple">Pineapple: $4</option>
                 <option value="pepper">Bell Peppers: $3</option>
                 <option value="serious lack of">No toppings: $0</option>
-              </select><br>
+              </select><br> -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="checkbox" name="toppings" value="extra cheese"> Extra Cheese<br>
+                    <input type="checkbox" name="toppings" value="chanterelles"> Chanterelles<br>
+                    <input type="checkbox" name="toppings" value="jalapenos"> Jalapenos<br>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="checkbox" name="toppings" value="pineapple"> Pineapple<br>
+                    <input type="checkbox" name="toppings" value="olives"> Black Olives<br>
+                    <input type="checkbox" name="toppings" value="tomatoes"> Tomatoes<br>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
