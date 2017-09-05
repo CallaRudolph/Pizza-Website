@@ -2,11 +2,11 @@
 
 #### _Fourth Independent Project (JS) for Intro at Epicodus, 06.16.2017_
 
-#### By _**Calla Rudolph (<callarudolph@gmail.com>)**_
+#### By _Calla Rudolph_ [(e-mail me here)](<mailto:callarudolph@gmail.com>)
 
 ## Description
 
-_This project utilizes objects with constructors and prototypes within Javascript. The user will choose selections to order a pizza, and the prototypes will display the user's order as well as calculate the user's total. Additional buttons allow for multiple orders as well as a delivery option._
+_This project utilizes objects with constructors and prototypes within JavaScript. The user will choose selections to order a pizza, and the prototypes will display the user's order as well as calculate the user's total. Additional buttons allow for multiple orders as well as a delivery option._
 
 ## Specifications
 
@@ -23,13 +23,12 @@ _This project utilizes objects with constructors and prototypes within Javascrip
 * Open GitHub site on your browser: https://github.com/CallaRudolph/pizza
 * Select the dropdown (green box) "Clone or download"
 * Copy the link for the GitHub repository
-* Open Terminal on your computer
-* In Terminal, perform the following steps:
-  * type 'cd desktop' and press enter
-  * type 'git clone' then copy the repository link and press enter
-  * type 'cd pizza' to access the path on your computer
-  * type 'open index.html' to view the pizza HTML on your browser
-* Input an to get started!
+* Open Terminal on your computer and perform the following steps:
+  * $ cd desktop
+  * $ git clone <paste repository link>
+  * $ cd pizza
+  * $ open index.html
+* Input an order to get started!
 
 ## Support and contact details
 
@@ -40,7 +39,7 @@ If you run into any findings, please email me at the address above!
 * HTML
 * CSS
 * Bootstrap
-* Javascript
+* JavaScript
 * jquery
 
 ### License
