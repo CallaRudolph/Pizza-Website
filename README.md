@@ -8,6 +8,19 @@
 
 _This project utilizes objects with constructors and prototypes within JavaScript. The user will choose selections to order a pizza, and the prototypes will display the user's order as well as calculate the user's total. Additional buttons allow for multiple orders as well as a delivery option._
 
+![Preview of Splash Page](img/home.png)
+_Splash page_
+
+![Preview of Order Confirmation](img/order.png)
+_Order confirmation_
+
+![Preview of Delivery Form](img/delivery.png)
+_Delivery form_
+
+![Preview of Delivery Confirmation](img/confirm.png)
+_Delivery confirmation_
+
+
 ## Specifications
 
 * It calculates a total amount and displays back the user's name and order when the Total button is clicked.
@@ -20,14 +33,14 @@ _This project utilizes objects with constructors and prototypes within JavaScrip
 
 ## Setup/Installation Requirements
 
-* Open GitHub site on your browser: https://github.com/CallaRudolph/pizza
+* Open GitHub site on your browser: https://github.com/CallaRudolph/Pizza-Website
 * Select the dropdown (green box) "Clone or download"
 * Copy the link for the GitHub repository
 * Open Terminal on your computer and perform the following steps:
 ````
   * $ cd desktop
   * $ git clone <paste repository link>
-  * $ cd pizza
+  * $ cd Pizza-Website
   * $ open index.html
 ````
 * Input an order to get started!
