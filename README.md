@@ -4,6 +4,8 @@
 
 #### By _Calla Rudolph_ [(e-mail me here)](<mailto:callarudolph@gmail.com>)
 
+Check out the gh-pages live site here: https://callarudolph.github.io/Pizza-Website/
+
 ## Description
 
 _This project utilizes objects with constructors and prototypes within JavaScript. The user will choose selections to order a pizza, and the prototypes will display the user's order as well as calculate the user's total. Additional buttons allow for multiple orders as well as a delivery option._
