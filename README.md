@@ -24,10 +24,12 @@ _This project utilizes objects with constructors and prototypes within JavaScrip
 * Select the dropdown (green box) "Clone or download"
 * Copy the link for the GitHub repository
 * Open Terminal on your computer and perform the following steps:
+````
   * $ cd desktop
   * $ git clone <paste repository link>
   * $ cd pizza
   * $ open index.html
+````
 * Input an order to get started!
 
 ## Support and contact details
